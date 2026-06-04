@@ -64,14 +64,18 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 16px;
             background-color: #0f1110;
+            padding: 10px;
+            transition: max-width 0.3s ease-in-out;
         }
 
         img {
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 8px; /* Clean rounded edges */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
 
         .logo-wrap {
@@ -87,6 +91,7 @@
             padding: 35px 20px;
             border-top: 1px solid #2a2c2b;
             text-align: center;
+            transition: max-width 0.3s ease-in-out;
         }
 
         .footer-title {
@@ -164,6 +169,45 @@
             background-color: #2a2c2b;
             color: #ffffff;
             border: 1px solid #3a3c3b;
+        }
+
+        /* --- 4. Responsive Media Queries --- */
+        @media (min-width: 768px) {
+            /* On larger devices (tablets, desktops, landscape), show menus side-by-side */
+            .menu-container {
+                max-width: 1000px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+                padding: 20px;
+            }
+
+            footer {
+                max-width: 1000px;
+                padding: 40px 60px;
+            }
+
+            .footer-info {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                flex-wrap: wrap;
+                margin-bottom: 25px;
+            }
+
+            .footer-info p {
+                margin: 0;
+            }
+
+            .action-buttons {
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .btn {
+                min-width: 220px;
+            }
         }
     </style>
 </head>

@@ -26,10 +26,8 @@
         header {
             position: fixed;
             top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
             width: 100%;
-            max-width: 500px;
             background-color: #0b0d0c;
             border-bottom: 2px solid #d4af37;
             display: flex;
@@ -62,8 +60,8 @@
 
         /* --- 2. Main Menu Container --- */
         .menu-container {
-            max-width: 500px; 
-            margin: 0 auto;
+            width: 100%;
+            margin: 0;
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -83,8 +81,8 @@
 
         /* --- 3. Functional Footer --- */
         footer {
-            max-width: 500px;
-            margin: 20px auto 0;
+            width: 100%;
+            margin: 20px 0 0 0;
             background-color: #151716;
             padding: 35px 20px;
             border-top: 1px solid #2a2c2b;
@@ -166,6 +164,23 @@
             background-color: #2a2c2b;
             color: #ffffff;
             border: 1px solid #3a3c3b;
+        }
+
+        /* Cap and center the layout on desktop and tablet screens */
+        @media (min-width: 600px) {
+            header {
+                max-width: 500px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .menu-container {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            footer {
+                max-width: 500px;
+                margin: 20px auto 0;
+            }
         }
     </style>
 </head>

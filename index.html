@@ -60,7 +60,8 @@
 
         /* --- 2. Main Menu Container --- */
         .menu-container {
-            max-width: 500px; 
+            width: 100%;
+            max-width: 100%; /* Full screen width on mobile */
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -81,7 +82,8 @@
 
         /* --- 3. Functional Footer --- */
         footer {
-            max-width: 500px;
+            width: 100%;
+            max-width: 100%; /* Full screen width on mobile */
             margin: 20px auto 0;
             background-color: #151716;
             padding: 35px 20px;
@@ -164,6 +166,13 @@
             background-color: #2a2c2b;
             color: #ffffff;
             border: 1px solid #3a3c3b;
+        }
+
+        /* Cap width on desktops/tablets so it remains readable and centered */
+        @media (min-width: 600px) {
+            .menu-container, footer {
+                max-width: 500px;
+            }
         }
     </style>
 </head>
